@@ -19,3 +19,6 @@ Project
 .Xauthority
 .zcompdump-arch-5.8
 .zsh_history
+.viminfo
+.gitconfig
+.vim/netrwhist
