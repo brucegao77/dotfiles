@@ -184,6 +184,9 @@ bar {
 
 # general
 focus_follows_mouse  yes
+default_border none
+default_floating_border none
+hide_edge_borders both
 
 # Gaps
 gaps inner 20
@@ -195,6 +198,7 @@ smart_borders on
 assign [class="(?i)termite"] $ws1
 assign [class="(?i)chromium"] $ws2
 assign [class="(?i)code"] $ws3
+assign [class="(?i)chromium"] $ws4
 
 # exec
 exec --no-startup-id fcitx
