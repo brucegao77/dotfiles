@@ -61,11 +61,11 @@ update_rate() {
 
   local interval=$(( $time - $last_time ))
   if [ $interval -gt 0 ]; then
-    rate="$(readable $(( (rx - last_rx) / interval )))↓ $(readable $(( (tx - last_tx) / interval )))↑"
+    rate=" $(readable $(( (rx - last_rx) / interval )))   $(readable $(( (tx - last_tx) / interval )))"
   else
     rate=""
   fi
-
+\033[0m
   last_time=$time
   last_rx=$rx
   last_tx=$tx
@@ -75,5 +75,5 @@ i3status | (read line && echo "$line" && read line && echo "$line" && read line 
 do
   read line
   update_rate
-  echo "${rate} ${line}" || exit 1
+  echo ",[{\"full_text\":\"${rate}\" },${line#,\[}" || exit 1
 done)

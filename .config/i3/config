@@ -174,12 +174,44 @@ mode "resize" {
 
 #bindsym $mod+r mode "resize"
 
+# Defining colors
+## RGB
+set $cyan0          #4ec2f7
+set $silver0        #e4e4e4
+set $orange         #ff8700
+
+## RGBA
+set $cyan           #4ec2f799
+set $acqua          #00708999
+set $wine           #72003e99
+set $magenta        #af005f99
+set $silver         #e4e4e499
+set $toxic          #8EC00099
+set $elegant        #00002c00
+
+# Set some nice colors      border      background text        indicator
+client.focused              $cyan       $cyan      $elegant    $cyan
+client.unfocused            $elegant    $elegant   $cyan       $elegant
+client.focused_inactive     $acqua      $acqua     $silver     $acqua
+client.urgent               $magenta    $magenta   $silver     $magenta
+client.placeholder          $magenta    $magenta   $silver     $magenta
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
         status_command i3status
-        status_command exec ~/.config/i3status/net-speed.sh
+        status_command ~/.config/i3status/net-speed.sh
         position top
+        separator_symbol "  "
+        font pango: Monaco 10, Icons 9
+        colors {
+                                # Border    # Background    # Text
+            focused_workspace   $silver0    $silver0        $elegant
+            active_workspace    $elegant    $elegant        $orange
+            inactive_workspace  $elegant    $elegant        $cyan0
+            urgent_workspace    $acqua      $acqua          $silver0
+            background          $elegant
+        }
 }
 
 # general
@@ -211,5 +243,5 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 # shortcuts
 bindsym $mod+c exec chromium
 bindsym $mod+Shift+c exec code
-bindsym $mod+d exec --no-startup-id rofi -show drun -theme lb
+bindsym $mod+space exec --no-startup-id rofi -show drun -theme lb
 
