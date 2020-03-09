@@ -21,6 +21,7 @@ order += "memory"
 order += "disk /"
 order += "disk /home"
 order += "memory"
+order += "volume master"
 order += "tztime local"
 
 wireless _first_ {

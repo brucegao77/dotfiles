@@ -244,4 +244,6 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 bindsym $mod+c exec chromium
 bindsym $mod+Shift+c exec code
 bindsym $mod+space exec --no-startup-id rofi -show drun -theme lb
-
+bindsym $mod+F12 exec amixer -q set Master 2dB+ unmute
+bindsym $mod+F11 exec amixer -q set Master 2dB- unmute
+bindsym $mod+F10 exec amixer -q set Master toggle
