@@ -241,7 +241,6 @@ exec --no-startup-id flameshot
 exec --no-startup-id termite
 exec --no-startup-id chromium
 exec --no-startup-id telegram-desktop
-exec --no-startup-id nixnote2
 
 # shortcuts
 bindsym $mod+c exec chromium
