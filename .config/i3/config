@@ -237,6 +237,7 @@ assign [class="(?i)nixnote2"] $ws5
 exec --no-startup-id fcitx
 exec --no-startup-id picom -b
 exec --no-startup-id feh --bg-fill ~/.config/wallpaper.png
+exec --no-startup-id flameshot
 exec --no-startup-id termite
 exec --no-startup-id chromium
 exec --no-startup-id telegram-desktop
