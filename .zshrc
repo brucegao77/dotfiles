@@ -112,3 +112,4 @@ export GTK_IM_MODULE="fcitx"
 export QT_IM_MODULE="fcitx"
 export XMODIFIERS="@im=fcitx"
 
+export PATH=/home/bruce/bin:$PATH
