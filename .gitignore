@@ -28,3 +28,5 @@ Pictures
 .config/nixnote2
 .config/QtProject.conf
 .config/Dharkael
+bin
+.config/rclone
