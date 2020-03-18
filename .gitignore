@@ -32,3 +32,8 @@ bin
 .config/rclone
 Video
 .aria2
+.config/VirtualBox
+.config/vlc
+.config/mimeapps.list
+.config/nautilus
+.config/xfce4

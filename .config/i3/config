@@ -84,7 +84,7 @@ bindsym $mod+h split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -109,7 +109,7 @@ set $ws1 " Terminal"
 set $ws2 " Chromium"
 set $ws3 " VS Code"
 set $ws4 " Message"
-set $ws5 "5"
+set $ws5 " Video"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
@@ -220,7 +220,7 @@ default_border none
 default_floating_border none
 hide_edge_borders both
 
-# Gaps
+# gaps
 gaps inner 20
 gaps outer 20
 smart_gaps on
@@ -231,6 +231,11 @@ assign [class="(?i)termite"] $ws1
 assign [class="(?i)chromium"] $ws2
 assign [class="(?i)code"] $ws3
 assign [class="(?i)chromium|(?i)telegram"] $ws4
+assign [class="(?i)vlc"] $ws5
+
+# specific window
+for_window [class="(?i)nautilus"] floating enable, resize set 1200 800, move position center
+for_window [class="(?i)feh"] floating enable, resize set 1200 800, move position center
 
 # exec
 exec --no-startup-id fcitx
@@ -239,7 +244,6 @@ exec --no-startup-id feh --bg-fill ~/.config/wallpaper.png
 exec --no-startup-id flameshot
 exec --no-startup-id termite
 exec --no-startup-id chromium
-exec --no-startup-id telegram-desktop
 
 # shortcuts
 bindsym $mod+c exec chromium
