@@ -109,7 +109,7 @@ set $ws1 " Terminal"
 set $ws2 " Chromium"
 set $ws3 " VS Code"
 set $ws4 " Message"
-set $ws5 " Video"
+set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
@@ -121,8 +121,8 @@ bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
 bindsym $mod+4 workspace $ws4
-bindsym $mod+5 workspace $ws5
-bindsym $mod+6 workspace $ws6
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
 bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
@@ -133,8 +133,8 @@ bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3
 bindsym $mod+Shift+4 move container to workspace $ws4
-bindsym $mod+Shift+5 move container to workspace $ws5
-bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
 bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
@@ -231,7 +231,6 @@ assign [class="(?i)termite"] $ws1
 assign [class="(?i)chromium"] $ws2
 assign [class="(?i)code"] $ws3
 assign [class="(?i)chromium|(?i)telegram"] $ws4
-assign [class="(?i)vlc"] $ws5
 
 # specific window
 for_window [class="(?i)nautilus"] floating enable, resize set 1200 800, move position center
