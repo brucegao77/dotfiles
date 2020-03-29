@@ -112,9 +112,12 @@ export GTK_IM_MODULE="fcitx"
 export QT_IM_MODULE="fcitx"
 export XMODIFIERS="@im=fcitx"
 
+# export
+export GO111MODULE=auto
 export PATH=/home/bruce/bin:$PATH
 
+# alias
 alias proxy='export http_proxy="http://127.0.0.1:8118" && export https_proxy="http://127.0.0.1:8118" && curl ip.sb'
 alias unproxy='unset http_proxy && unset https_proxy && curl ip.sb'
-
-export GO111MODULE=auto
+alias mountwd='udisksctl mount --block-device /dev/sdb1 && udisksctl mount --block-device /dev/sdb2 && udisksctl mount --block-device /dev/sdb3'
+alias unmountwd='udisksctl unmount --block-device /dev/sdb1 && udisksctl unmount --block-device /dev/sdb2 && udisksctl unmount --block-device /dev/sdb3'

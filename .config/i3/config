@@ -108,8 +108,8 @@ bindsym $mod+a focus parent
 set $ws1 " Terminal"
 set $ws2 " Chromium"
 set $ws3 " VS Code"
-set $ws4 "4"
-set $ws5 "5"
+set $ws4 " Firefox"
+set $ws5 " Windows"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
@@ -230,12 +230,14 @@ smart_borders on
 assign [class="(?i)termite"] $ws1
 assign [class="(?i)chromium"] $ws2
 assign [class="(?i)code"] $ws3
+assign [class="(?i)firefox"] $ws4
+assign [class="(?i)virtualbox"] $ws5
 
 # specific window
 for_window [class="(?i)nautilus"] floating enable, resize set 1200 800, move position center
 for_window [class="(?i)feh"] floating enable, resize set 1200 800, move position center
 for_window [class="(?i)telegram"] floating enable, resize set 1200 800, move position center
-for_window [class="(?i)standard notes"] floating enable, resize set 1200 800, move position center
+for_window [class="(?i)msedge"] floating enable, resize set 1200 800, move position center
 
 # exec
 exec --no-startup-id fcitx
@@ -246,11 +248,11 @@ exec --no-startup-id termite
 exec --no-startup-id chromium
 
 # shortcuts
-bindsym $mod+c exec chromium
-bindsym $mod+Shift+c exec code
+bindsym $mod+c exec --no-startup-id chromium
+bindsym $mod+Shift+c exec --no-startup-id code
 bindsym $mod+space exec --no-startup-id rofi -show drun -theme lb
 bindsym $mod+F12 exec amixer -q set Master 2dB+ unmute
 bindsym $mod+F11 exec amixer -q set Master 2dB- unmute
 bindsym $mod+F10 exec amixer -q set Master toggle
-bindsym $mod+s exec --no-startup-id standardnotes-desktop
 bindsym $mod+z exec --no-startup-id telegram-desktop
+bindsym $mod+f exec --no-startup-id firefox
