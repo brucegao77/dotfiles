@@ -21,7 +21,7 @@ Project
 .zsh_history
 .viminfo
 .gitconfig
-.vim/netrwhist
+.vim/.netrwhist
 .config/Code\ -\ OSS
 Pictures
 .java
@@ -45,3 +45,5 @@ go
 Music
 .mozilla
 Backups
+.mpd
+.ncmpcpp
