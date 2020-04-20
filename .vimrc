@@ -23,3 +23,4 @@ set listchars=tab:»■,trail:■
 set list
 set wildmenu
 set wildmode=longest:list,full
+set backspace=2
