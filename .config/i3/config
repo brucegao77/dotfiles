@@ -41,7 +41,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec termite
 
 # kill focused window
 bindsym $mod+q kill
@@ -108,8 +108,8 @@ bindsym $mod+a focus parent
 set $ws1 " Terminal"
 set $ws2 " Chromium"
 set $ws3 " VS Code"
-set $ws4 " Firefox"
-set $ws5 " Windows"
+set $ws4 " Telegram"
+set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
@@ -230,13 +230,14 @@ smart_borders on
 assign [class="(?i)termite"] $ws1
 assign [class="(?i)chromium"] $ws2
 assign [class="(?i)code"] $ws3
-assign [class="(?i)firefox"] $ws4
+assign [class="(?i)telegram"] $ws4
 assign [class="(?i)virtualbox"] $ws5
+assign [class="(?i)goland"] $ws5
 
 # specific window
 for_window [class="(?i)nautilus"] floating enable, resize set 1200 800, move position center
 for_window [class="(?i)feh"] floating enable, resize set 1200 800, move position center
-for_window [class="(?i)telegram"] floating enable, resize set 1200 800, move position center
+#for_window [class="(?i)telegram"] floating enable, resize set 1200 800, move position center
 for_window [class="(?i)msedge"] floating enable, resize set 1200 800, move position center
 
 # exec
@@ -246,6 +247,7 @@ exec --no-startup-id feh --bg-fill ~/.config/wallpaper.png
 exec --no-startup-id flameshot
 exec --no-startup-id termite
 exec --no-startup-id chromium
+exec --no-startup-id telegram
 
 # shortcuts
 bindsym $mod+c exec --no-startup-id chromium

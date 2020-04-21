@@ -49,3 +49,6 @@ Backups
 .ncmpcpp
 Docker
 .gnupg
+.config/JetBrains
+.config/menus
+.jetbrains
