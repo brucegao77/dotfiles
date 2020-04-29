@@ -119,5 +119,4 @@ export PATH=/home/bruce/bin:$PATH
 # alias
 alias proxy='export http_proxy="http://127.0.0.1:8118" && export https_proxy="http://127.0.0.1:8118" && curl ip.sb'
 alias unproxy='unset http_proxy && unset https_proxy && curl ip.sb'
-alias mountwd='udisksctl mount --block-device /dev/sdb1 && udisksctl mount --block-device /dev/sdb2 && udisksctl mount --block-device /dev/sdb3'
-alias unmountwd='udisksctl unmount --block-device /dev/sdb1 && udisksctl unmount --block-device /dev/sdb2 && udisksctl unmount --block-device /dev/sdb3'
+alias backup='rsync(){sudo rsync --archive --hard-links --human-readable --numeric-ids --delete --delete-excluded --acls --xattrs --sparse --itemize-changes --verbose --progress --exclude="*.*~" --exclude-from=/home/bruce/rsync_exclude.list -e "ssh -p 77 -i /home/bruce/.ssh/ali" / bruce@$1:/home/bruce/backups/};rsync'

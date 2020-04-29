@@ -1,0 +1,12 @@
+home/bruce/Videos/*
+home/bruce/Downloads/*
+home/bruce/.cache/*
+var/cache/*/*
+var/tmp/*
+sys/*
+proc/*
+dev/*
+tmp/*
+run/*
+mnt/*
+media/*

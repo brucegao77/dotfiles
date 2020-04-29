@@ -107,9 +107,9 @@ bindsym $mod+a focus parent
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 " Terminal"
 set $ws2 " Chromium"
-set $ws3 " VS Code"
+set $ws3 " IDE"
 set $ws4 " Telegram"
-set $ws5 "5"
+set $ws5 " Notes"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
@@ -172,7 +172,7 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-#bindsym $mod+r mode "resize"
+bindsym $mod+r mode "resize"
 
 # Defining colors
 ## RGB
@@ -221,18 +221,18 @@ default_floating_border none
 hide_edge_borders both
 
 # gaps
-gaps inner 20
-gaps outer 20
+gaps inner 5
+#gaps outer 5
 smart_gaps on
 smart_borders on
 
 # assign
 assign [class="(?i)termite"] $ws1
 assign [class="(?i)chromium"] $ws2
-assign [class="(?i)code"] $ws3
+assign [class="(?i)goland"] $ws3
 assign [class="(?i)telegram"] $ws4
-assign [class="(?i)virtualbox"] $ws5
-assign [class="(?i)goland"] $ws5
+assign [class="(?i)clion"] $ws3
+assign [class="(?i)standard"] $ws5
 
 # specific window
 for_window [class="(?i)nautilus"] floating enable, resize set 1200 800, move position center
@@ -242,16 +242,15 @@ for_window [class="(?i)msedge"] floating enable, resize set 1200 800, move posit
 
 # exec
 exec --no-startup-id fcitx
-exec --no-startup-id picom -b
+#exec --no-startup-id picom -b
 exec --no-startup-id feh --bg-fill ~/.config/wallpaper.png
 exec --no-startup-id flameshot
 exec --no-startup-id termite
 exec --no-startup-id chromium
-exec --no-startup-id telegram
 
 # shortcuts
 bindsym $mod+c exec --no-startup-id chromium
-bindsym $mod+Shift+c exec --no-startup-id code
+bindsym $mod+Shift+g exec --no-startup-id goland
 bindsym $mod+space exec --no-startup-id rofi -show drun -theme lb
 bindsym $mod+F12 exec amixer -q set Master 2dB+ unmute
 bindsym $mod+F11 exec amixer -q set Master 2dB- unmute
