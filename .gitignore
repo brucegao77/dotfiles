@@ -52,3 +52,5 @@ Docker
 .config/JetBrains
 .config/menus
 .jetbrains
+.config/gcloud
+.boto

@@ -120,3 +120,9 @@ export PATH=/home/bruce/bin:$PATH
 alias proxy='export http_proxy="http://127.0.0.1:8118" && export https_proxy="http://127.0.0.1:8118" && curl ip.sb'
 alias unproxy='unset http_proxy && unset https_proxy && curl ip.sb'
 alias backup='rsync(){sudo rsync --archive --hard-links --human-readable --numeric-ids --delete --delete-excluded --acls --xattrs --sparse --itemize-changes --verbose --progress --exclude="*.*~" --exclude-from=/home/bruce/rsync_exclude.list -e "ssh -p 77 -i /home/bruce/.ssh/ali" / bruce@$1:/home/bruce/backups/};rsync'
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/bruce/Utils/google-cloud-sdk/path.zsh.inc' ]; then . '/home/bruce/Utils/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/bruce/Utils/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/bruce/Utils/google-cloud-sdk/completion.zsh.inc'; fi
